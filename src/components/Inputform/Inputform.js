@@ -32,7 +32,7 @@ const Inputform = ({
         <label>Bill</label>
         <img src={dollar} alt="dollar sign" />
         <input
-          type="number"
+          type="text"
           name="bill-amount"
           onChange={(event) => bill(event.target.value)}
           className={billError ? "error" : null}
@@ -79,9 +79,10 @@ const Inputform = ({
             50%
           </button>
           <input
-            type="number"
+            type="text"
             placeholder="Custom"
             onChange={(event) => handleSelect(event, 6)}
+            value={selectBtn === 6 ? tipValue : null}
             className={`${selectBtn === 6 ? "focus" : null} ${
               tipError ? "error" : null
             }`}
@@ -92,11 +93,13 @@ const Inputform = ({
       <div className="form-box">
         <div className="people">
           <label>Number of People</label>
-          {peopleError && <span className="error">Can't be zero</span>}
+          {peopleError && (
+            <span className="error">Can't be zero or alphabet</span>
+          )}
         </div>
         <img src={person} alt="dollar sign" />
         <input
-          type="number"
+          type="text"
           name="people"
           onChange={(event) => people(event.target.value)}
           className={peopleError ? "error" : null}

@@ -25,7 +25,7 @@
            
         }
 
-        input[type="number"].error {
+        input[type="text"].error {
         outline: 2px solid red;
         }
 
@@ -36,11 +36,13 @@
 
             .error {
                 color: red;
+                font-size: .7rem;
+                
             }
         }
     }
 
-    input[type="number"] {
+    input[type="text"] {
         width: 100%;
         padding-block: .5rem;
         background-color: $VERY-LIGHT-GRAYISH-CYAN;
@@ -102,19 +104,20 @@
                 }
             }
 
-            input[type="number"]::placeholder {
+            input[type="text"]::placeholder {
                 text-align: center;
             }
 
-            input[type="number"].focus {
+            input[type="text"].focus {
                 outline: 2px solid $STRONG-CYAN;
                 background-color: lighten($STRONG-CYAN, 20);
             }
 
 
-            input[type="number"].error {
+            input[type="text"].error {
                 outline: 2px solid red;
                 background-color: transparent;
+                
                 
             }
 
