@@ -1,0 +1,79 @@
+@import "./../../config";
+
+.tips {
+    background: $VERY-DARK-CYAN;
+    border-radius: 15px;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-between;
+    max-width: 25rem;
+    overflow: hidden;
+
+    .tip {
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+
+        &-amount {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &_details .tip__title {
+                color: $WHITE;
+                font-size: .9rem;
+            }
+
+            &_details .person {
+                color: $GRAYISH-CYAN;
+                font-size: .7rem;
+            }
+        }
+
+        &-total .amount {
+            font-size: 2.3rem;
+            color: $STRONG-CYAN;
+        }
+
+        @include screensize (450px) {
+            gap: 1em;
+        }
+    }
+
+    &-btn {
+        padding: .8rem; 
+        text-transform: uppercase;
+        color: $VERY-DARK-CYAN;
+        border-radius: 5px;
+        font-weight: $WEIGHT;
+        background-color: $STRONG-CYAN;
+        border: none;
+        opacity: 30%;
+        transition: .5s;
+        cursor: not-allowed;
+
+        
+
+        &.reset{   
+            background-color: $STRONG-CYAN;
+            opacity: 100%;
+
+            &:hover {
+                filter: brightness(140%);
+                opacity: 90%;
+                cursor: pointer;
+              }
+        }
+    }
+
+    @include screensize (450px) {
+        gap: 1.5em;
+    }
+
+  
+}
+
+
+

@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  // COLOURS
+$STRONG-CYAN: hsl(172, 67%, 45%);
+$VERY-DARK-CYAN: hsl(183, 100%, 15%);
+$DARK-GRAYISH-CYAN: hsl(186, 14%, 43%);
+$GRAYISH-CYAN: hsl(184, 14%, 56%);
+$LIGHT-GRAYISH-CYAN: hsl(185, 41%, 84%);
+$VERY-LIGHT-GRAYISH-CYAN: hsl(189, 41%, 97%);
+$WHITE: hsl(0, 0%, 100%);
+
+// TYPOGRAPHY
+$INPUT-F-SIZE: 24px;
+$WEIGHT: 700;
+
+@mixin screensize ($size) {
+  @media screen and (max-width: $size){
+    @content
+  }
+}

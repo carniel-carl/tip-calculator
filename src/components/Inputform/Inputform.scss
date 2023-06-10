@@ -1,0 +1,131 @@
+@import "./../../config";
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-between;
+
+
+    label {
+        display: block;
+        color: $VERY-DARK-CYAN;
+        margin-bottom: .3rem;
+    }
+
+    .form-box {
+        position: relative;
+    
+
+        img {
+            position: absolute;
+            top: 55%;
+            left: 5%;
+           
+        }
+
+        input[type="number"].error {
+        outline: 2px solid red;
+        }
+
+        .people {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: .3rem;
+
+            .error {
+                color: red;
+            }
+        }
+    }
+
+    input[type="number"] {
+        width: 100%;
+        padding-block: .5rem;
+        background-color: $VERY-LIGHT-GRAYISH-CYAN;
+        border: none;
+       text-align: end;
+       font-family: inherit;
+       color: $VERY-DARK-CYAN;
+       font-size:$INPUT-F-SIZE ;
+       border-radius: 5px;
+       outline: none;
+       
+
+    &:focus {
+        outline: 2px solid $STRONG-CYAN;
+    }
+
+    }
+
+    .tip-container {
+        margin-block: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        .tip-title {
+            color: $VERY-DARK-CYAN;
+    
+        }
+
+        .btn {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+            gap: .8rem;
+
+            button {
+                padding: .4rem .8rem;
+                font-size: 1.5rem;
+                font-family: inherit;
+                color: $WHITE;
+                background-color: $VERY-DARK-CYAN;
+                border: none;
+                border-radius: 5px;
+                transition: .6s;
+                cursor: pointer;
+                
+                &.selected {
+                    background-color: $STRONG-CYAN;
+                    color: $VERY-DARK-CYAN;
+                }
+
+                &.clear {
+                    background-color: $VERY-DARK-CYAN;
+                    color: $WHITE;
+                }
+
+                &:hover {
+                    color: $VERY-DARK-CYAN;
+                    background-color: lighten($STRONG-CYAN, 20);
+                }
+            }
+
+            input[type="number"]::placeholder {
+                text-align: center;
+            }
+
+            input[type="number"].focus {
+                outline: 2px solid $STRONG-CYAN;
+                background-color: lighten($STRONG-CYAN, 20);
+            }
+
+
+            input[type="number"].error {
+                outline: 2px solid red;
+                background-color: transparent;
+                
+            }
+
+
+            @include screensize (450px) {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+        }
+
+        
+    }
+
+    
+}

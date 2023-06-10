@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-between;
+}
+.form-container label {
+  display: block;
+  color: hsl(183, 100%, 15%);
+  margin-bottom: 0.3rem;
+}
+.form-container .form-box {
+  position: relative;
+}
+.form-container .form-box img {
+  position: absolute;
+  top: 55%;
+  left: 5%;
+}
+.form-container .form-box input[type=number].error {
+  outline: 2px solid red;
+}
+.form-container .form-box .people {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+.form-container .form-box .people .error {
+  color: red;
+}
+.form-container input[type=number] {
+  width: 100%;
+  padding-block: 0.5rem;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  text-align: end;
+  font-family: inherit;
+  color: hsl(183, 100%, 15%);
+  font-size: 24px;
+  border-radius: 5px;
+  outline: none;
+}
+.form-container input[type=number]:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+.form-container .tip-container {
+  margin-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-container .tip-container .tip-title {
+  color: hsl(183, 100%, 15%);
+}
+.form-container .tip-container .btn {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+  gap: 0.8rem;
+}
+.form-container .tip-container .btn button {
+  padding: 0.4rem 0.8rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 5px;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.form-container .tip-container .btn button.selected {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.form-container .tip-container .btn button.clear {
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+}
+.form-container .tip-container .btn button:hover {
+  color: hsl(183, 100%, 15%);
+  background-color: #6ae2d2;
+}
+.form-container .tip-container .btn input[type=number]::-moz-placeholder {
+  text-align: center;
+}
+.form-container .tip-container .btn input[type=number]::placeholder {
+  text-align: center;
+}
+.form-container .tip-container .btn input[type=number].focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+  background-color: #6ae2d2;
+}
+.form-container .tip-container .btn input[type=number].error {
+  outline: 2px solid red;
+  background-color: transparent;
+}
+@media screen and (max-width: 450px) {
+  .form-container .tip-container .btn {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}/*# sourceMappingURL=Inputform.css.map */

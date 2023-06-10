@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tips {
+  background: hsl(183, 100%, 15%);
+  border-radius: 15px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-between;
+  max-width: 25rem;
+  overflow: hidden;
+}
+.tips .tip {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.tips .tip-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tips .tip-amount_details .tip__title {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.9rem;
+}
+.tips .tip-amount_details .person {
+  color: hsl(184, 14%, 56%);
+  font-size: 0.7rem;
+}
+.tips .tip-total .amount {
+  font-size: 2.3rem;
+  color: hsl(172, 67%, 45%);
+}
+@media screen and (max-width: 450px) {
+  .tips .tip {
+    gap: 1em;
+  }
+}
+.tips-btn {
+  padding: 0.8rem;
+  text-transform: uppercase;
+  color: hsl(183, 100%, 15%);
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: hsl(172, 67%, 45%);
+  border: none;
+  opacity: 30%;
+  transition: 0.5s;
+  cursor: not-allowed;
+}
+.tips-btn.reset {
+  background-color: hsl(172, 67%, 45%);
+  opacity: 100%;
+}
+.tips-btn.reset:hover {
+  filter: brightness(140%);
+  opacity: 90%;
+  cursor: pointer;
+}
+@media screen and (max-width: 450px) {
+  .tips {
+    gap: 1.5em;
+  }
+}/*# sourceMappingURL=Tip.css.map */

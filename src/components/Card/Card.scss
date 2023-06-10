@@ -1,0 +1,25 @@
+@import "./../../config";
+
+.card {
+    width: 52rem;
+    padding: 1.5rem;
+    background: $WHITE;
+    border-radius: 18px;
+    box-shadow: 2px 5px 30px hsla(183, 100%, 15%, 10%);
+    // min-height: max-content;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    
+    
+
+    @include screensize(450px) {
+        grid-template-columns: 1fr;
+        width: 100vw;
+        border-radius: 18px 18px 0 0;
+        
+        
+    }
+}
+
