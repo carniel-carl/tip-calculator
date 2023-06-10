@@ -31,7 +31,7 @@ const Tip = ({ tip, totalTip, totalAmt, completed, resetAll }) => {
             <h2 className="amount">{currencyAmt(totalTip)}</h2>
           </div>
         </div>
-        {/* <div className="tip-amount">
+        <div className="tip-amount">
           <div className="tip-amount_details">
             <p className="tip__title">Total</p>
             <p className="person">Amount</p>
@@ -40,7 +40,7 @@ const Tip = ({ tip, totalTip, totalAmt, completed, resetAll }) => {
           <div className="tip-total">
             <h2 className="amount">{currencyAmt(totalAmt)}</h2>
           </div>
-        </div> */}
+        </div>
       </div>
 
       <button
