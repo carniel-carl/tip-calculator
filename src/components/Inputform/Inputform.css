@@ -23,7 +23,7 @@
   top: 55%;
   left: 5%;
 }
-.form-container .form-box input[type=text].error {
+.form-container .form-box input[type=number].error {
   outline: 2px solid red;
 }
 .form-container .form-box .people {
@@ -35,7 +35,7 @@
   color: red;
   font-size: 0.7rem;
 }
-.form-container input[type=text] {
+.form-container input[type=number] {
   width: 100%;
   padding-block: 0.5rem;
   background-color: hsl(189, 41%, 97%);
@@ -47,7 +47,7 @@
   border-radius: 5px;
   outline: none;
 }
-.form-container input[type=text]:focus {
+.form-container input[type=number]:focus {
   outline: 2px solid hsl(172, 67%, 45%);
 }
 .form-container .tip-container {
@@ -87,17 +87,17 @@
   color: hsl(183, 100%, 15%);
   background-color: #6ae2d2;
 }
-.form-container .tip-container .btn input[type=text]::-moz-placeholder {
+.form-container .tip-container .btn input[type=number]::-moz-placeholder {
   text-align: center;
 }
-.form-container .tip-container .btn input[type=text]::placeholder {
+.form-container .tip-container .btn input[type=number]::placeholder {
   text-align: center;
 }
-.form-container .tip-container .btn input[type=text].focus {
+.form-container .tip-container .btn input[type=number].focus {
   outline: 2px solid hsl(172, 67%, 45%);
   background-color: #6ae2d2;
 }
-.form-container .tip-container .btn input[type=text].error {
+.form-container .tip-container .btn input[type=number].error {
   outline: 2px solid red;
   background-color: transparent;
 }

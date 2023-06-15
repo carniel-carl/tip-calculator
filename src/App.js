@@ -28,11 +28,11 @@ function App() {
   const [completed, setCompleted] = useState(false);
 
   // regex for number and/or decimal place number
-  const regex = /^\d+(?:\.\d+)?$/;
+  // const regex = /^\d+(?:\.\d+)?$/;
 
   // input validity checker
   const inputChecker = (value, setValue, setError) => {
-    if (regex.test(value) && parseFloat(value) > 0) {
+    if (value && value > 0) {
       setValue(parseFloat(value));
       setError(false);
     } else if (value === "") {
@@ -56,6 +56,10 @@ function App() {
   useEffect(() => {
     if (billVal && tipVal && peopleVal) {
       const tip = (billVal * tipVal) / 100;
+
+      console.log(
+        `bill value type is ${typeof billVal}. tip value type is ${typeof tipVal}. people value type is ${typeof peopleVal}`
+      );
       setTip(tip / peopleVal);
       const total = billVal + tip;
       setTotalTip(total / peopleVal);
