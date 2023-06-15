@@ -32,7 +32,7 @@ function App() {
 
   // input validity checker
   const inputChecker = (value, setValue, setError) => {
-    if (value && value > 0) {
+    if (value > 0) {
       setValue(parseFloat(value));
       setError(false);
     } else if (value === "") {
@@ -57,9 +57,6 @@ function App() {
     if (billVal && tipVal && peopleVal) {
       const tip = (billVal * tipVal) / 100;
 
-      console.log(
-        `bill value type is ${typeof billVal}. tip value type is ${typeof tipVal}. people value type is ${typeof peopleVal}`
-      );
       setTip(tip / peopleVal);
       const total = billVal + tip;
       setTotalTip(total / peopleVal);
